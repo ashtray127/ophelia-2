@@ -1,9 +1,15 @@
-import o_lib.o_input as o_input
-import o_lib.o_model as o_model
-import o_lib.o_object as o_object
-import o_lib.o_renderer as o_renderer
-import o_math as math
-import o_lib.o_util as o_util
-import o_lib.o_consts as o_consts
+# ---- LIBRARIES
+import o_lib.o_input as input
+import o_lib.o_model as model
+import o_lib.o_object as object
+import o_lib.o_math as math
+import o_lib.o_util as util
+import o_lib.o_consts as consts
+import o_lib.o_component as component
+import o_lib.o_camera as camera
 
-from o_math import Vertex2, Vertex3
+from o_lib.o_math import Vertex2, Vertex3
+
+
+# ---- COMPONENTS
+import o_lib.components.o_renderer as renderer

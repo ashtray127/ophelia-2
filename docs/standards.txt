@@ -1,0 +1,4 @@
+snake_case:  variables & functions
+PascalCase:  classes   & types
+
+All files should have unit tests (unless of exceptions)

@@ -1,13 +1,21 @@
-from typing import Generator
+from typing import Generator, TYPE_CHECKING
 
-import o_math
-import o_consts
-from o_math import Vertex2, Vertex3, BoundingBox
-from o_util import debug_print, verbose_print
+import o_lib.o_math as o_math
+import o_lib.o_consts as o_consts
+from o_lib.o_math import Vertex2, Vertex3, BoundingBox
+from o_lib.o_util import debug_print, verbose_print
+from o_lib.o_component import Component
 
-class RendererComponent:
+
+# TODO: figure out way to check that parent has a transform component as well, as it's needed for renderer
+# TODO: maybe implement some way for components to store a reference to their object?
+
+class Renderer(Component):
+
+    component_type = "Renderer"
 
     model_name: str
+    # Should (maybe) be stored as offsets from the object's position
     vertices: list[Vertex3]
     edges: list[tuple[int, int]]
     faces: list[tuple[tuple[int, int, int, int], tuple[int, int, int]]]
