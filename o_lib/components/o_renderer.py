@@ -33,7 +33,7 @@ class Renderer(Component):
         self.faces = faces
         self.pivot = pivot
 
-    @property
+    @property # NOTE: @property makes it so you do Renderer.bounding_box instead of Renderer.bounding_box()
     def bounding_box(self) -> BoundingBox:
         return o_math.calculate_bounding_box(self.vertices)
 

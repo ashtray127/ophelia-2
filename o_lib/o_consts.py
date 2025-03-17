@@ -1,3 +1,9 @@
+import string
+
+# TYPES - used for type hinting
+OID = str 
+TreeNode = tuple[OID, list["TreeNode"]]
+
 # Screen dimensions
 WIDTH, HEIGHT = 800, 600
 
@@ -18,6 +24,9 @@ RENDER_DISTANCE_LEFT = -RENDER_DISTANCE_RIGHT
 VERBOSE = True
 DEBUG = True
 
+# IDs
+VALID_OBJECT_ID_CHARS = string.ascii_letters + string.digits
+OBJECT_ID_LEN = 10
 
 split_whole_value = .1
 SPLIT_PERCENT = split_whole_value / 100
